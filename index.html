@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elie Chat</title>
+    <!-- Favicon Icon by Andrew at https://dribbble.com/Androoo -->
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <section class="chat">
+        <div class="chat-app">
+          <div class="sidebar">
+            <div class="menu">
+              <img
+                class="user-img"
+                height="40px"
+                width="40px"
+                src="/no-avatar.svg"
+                alt=""
+              />
+              <div class="button-wrapper">
+                <button class="logout-button">
+                  Log out
+                  <svg
+                    class="translate"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19.002 3h-14c-1.103 0-2 .897-2 2v4h2V5h14v14h-14v-4h-2v4c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.898-2-2-2z"
+                    ></path>
+                    <path d="m11 16 5-4-5-4v3.001H3v2h8z"></path>
+                  </svg>
+                </button>
+                <button class="open-chat">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.3394 9.32245C16.7434 8.94589 16.7657 8.31312 16.3891 7.90911C16.0126 7.50509 15.3798 7.48283 14.9758 7.85938L12.0497 10.5866L9.32245 7.66048C8.94589 7.25647 8.31312 7.23421 7.90911 7.61076C7.50509 7.98731 7.48283 8.62008 7.85938 9.0241L10.5866 11.9502L7.66048 14.6775C7.25647 15.054 7.23421 15.6868 7.61076 16.0908C7.98731 16.4948 8.62008 16.5171 9.0241 16.1405L11.9502 13.4133L14.6775 16.3394C15.054 16.7434 15.6868 16.7657 16.0908 16.3891C16.4948 16.0126 16.5171 15.3798 16.1405 14.9758L13.4133 12.0497L16.3394 9.32245Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="search">
+              <div class="input-field">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
+                  ></path>
+                </svg>
+                <input type="text" placeholder="Search any account" />
+              </div>
+            </div>
+            <div class="chat-wrapper">
+              <div class="user-chats"></div>
+            </div>
+          </div>
+          <div class="chat-window">
+            <div class="chat-header">
+              <div class="chat-info">
+                <button class="open-chat">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 5.99519C2 5.44556 2.44556 5 2.99519 5H11.0048C11.5544 5 12 5.44556 12 5.99519C12 6.54482 11.5544 6.99039 11.0048 6.99039H2.99519C2.44556 6.99039 2 6.54482 2 5.99519Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M2 11.9998C2 11.4501 2.44556 11.0046 2.99519 11.0046H21.0048C21.5544 11.0046 22 11.4501 22 11.9998C22 12.5494 21.5544 12.9949 21.0048 12.9949H2.99519C2.44556 12.9949 2 12.5494 2 11.9998Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M2.99519 17.0096C2.44556 17.0096 2 17.4552 2 18.0048C2 18.5544 2.44556 19 2.99519 19H15.0048C15.5544 19 16 18.5544 16 18.0048C16 17.4552 15.5544 17.0096 15.0048 17.0096H2.99519Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+                <img
+                  class="user-img"
+                  height="40px"
+                  width="40px"
+                  src="/no-avatar.svg"
+                  alt=""
+                />
+                <div class="user-data">
+                  <p class="user-name">Sigmas</p>
+                  <span class="user-status online">online</span>
+                </div>
+              </div>
+              <button class="menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                  <path
+                    d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div class="chat-wrapper">
+              <div class="chat-list">
+                <div class="scrollTo"></div>
+              </div>
+            </div>
+            <div class="chat-utils">
+              <div class="image-upload">
+                <img class="image-preview" src="" alt="" />
+                <span></span>
+                <div class="blur">click to remove</div>
+              </div>
+              <div class="chat-utils-b">
+                <button class="img-send-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26"
+                    height="26"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="7.499" cy="9.5" r="1.5"></circle>
+                    <path d="m10.499 14-1.5-2-3 4h12l-4.5-6z"></path>
+                    <path
+                      d="M19.999 4h-16c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm-16 14V6h16l.002 12H3.999z"
+                    ></path>
+                  </svg>
+                  <input type="file" class="message" accept="image/*" hidden />
+                </button>
+                <input
+                  class="message"
+                  type="text"
+                  placeholder="Type a message"
+                />
+                <button class="send-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                  >
+                    <path
+                      d="m21.426 11.095-17-8A1 1 0 0 0 3.03 4.242l1.212 4.849L12 12l-7.758 2.909-1.212 4.849a.998.998 0 0 0 1.396 1.147l17-8a1 1 0 0 0 0-1.81z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="login">
+        <h1 class="header">Elie Chat</h1>
+        <div class="login-card">
+          <div class="data">
+            <img class="user-img" height="40px" width="40px" src="" alt="" />
+            <h3 class="name">Satyam Dev</h3>
+            <p class="email">Maybe you&apos;re not logged in!</p>
+          </div>
+          <div class="buttons">
+            <button class="login primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                style="fill: white"
+              >
+                <path
+                  d="M20.283 10.356h-8.327v3.451h4.792c-.446 2.193-2.313 3.453-4.792 3.453a5.27 5.27 0 0 1-5.279-5.28 5.27 5.27 0 0 1 5.279-5.279c1.259 0 2.397.447 3.29 1.178l2.6-2.599c-1.584-1.381-3.615-2.233-5.89-2.233a8.908 8.908 0 0 0-8.934 8.934 8.907 8.907 0 0 0 8.934 8.934c4.467 0 8.529-3.249 8.529-8.934 0-.528-.081-1.097-.202-1.625z"
+                ></path></svg>
+              >Google
+            </button>
+            <button class="sign-out secondary">
+              Log Out
+              <svg
+                class="translate"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                style="fill: white"
+              >
+                <path
+                  d="M19.002 3h-14c-1.103 0-2 .897-2 2v4h2V5h14v14h-14v-4h-2v4c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.898-2-2-2z"
+                ></path>
+                <path d="m11 16 5-4-5-4v3.001H3v2h8z"></path>
+              </svg>
+            </button>
+          </div>
+          <span class="bottom-msg"></span>
+        </div>
+      </section>
+    </div>
+    <div class="loader">
+      <svg
+        width="44"
+        height="44"
+        viewBox="0 0 44 44"
+        xmlns="http://www.w3.org/2000/svg"
+        stroke="#fff"
+      >
+        <g fill="none" fill-rule="evenodd" stroke-width="2">
+          <circle cx="22" cy="22" r="1">
+            <animate
+              attributeName="r"
+              begin="0s"
+              dur="1.8s"
+              values="1; 20"
+              calcMode="spline"
+              keyTimes="0; 1"
+              keySplines="0.165, 0.84, 0.44, 1"
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="stroke-opacity"
+              begin="0s"
+              dur="1.8s"
+              values="1; 0"
+              calcMode="spline"
+              keyTimes="0; 1"
+              keySplines="0.3, 0.61, 0.355, 1"
+              repeatCount="indefinite"
+            />
+          </circle>
+          <circle cx="22" cy="22" r="1">
+            <animate
+              attributeName="r"
+              begin="-0.9s"
+              dur="1.8s"
+              values="1; 20"
+              calcMode="spline"
+              keyTimes="0; 1"
+              keySplines="0.165, 0.84, 0.44, 1"
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="stroke-opacity"
+              begin="-0.9s"
+              dur="1.8s"
+              values="1; 0"
+              calcMode="spline"
+              keyTimes="0; 1"
+              keySplines="0.3, 0.61, 0.355, 1"
+              repeatCount="indefinite"
+            />
+          </circle>
+        </g>
+      </svg>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
