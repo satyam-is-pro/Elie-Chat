@@ -1,5 +1,4 @@
 import { initializeApp, getApps } from 'firebase/app';
-import dotenv from 'dotenv';
 import {
   GoogleAuthProvider,
   getAuth,
