@@ -1023,3 +1023,23 @@ section.animate {
   color: red;
   margin-top: 10px;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#app {
+  flex: 1; /* Allow the app content to take up remaining space */
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #202023;
+  color: #ffffffcc;
+  font-size: 0.9rem;
+  border-top: 1px solid #3f3f46;
+}
+
